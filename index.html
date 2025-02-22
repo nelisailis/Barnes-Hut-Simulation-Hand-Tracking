@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+    #control-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+    p {
+      margin: 10px 0;
+      color: #00ff26;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+    input[type="range"] {
+      display: block;
+      margin: 10px 0;
+      width: 260px;
+    }
+    #webcam-feed {
+      width: 280px;
+      height: auto;
+      margin-top: 10px;
+      border: 1px solid #000000;
+    }
+    #webcam-canvas {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 280px;
+      height: 210px;
+    }
+  </style>
+</head>
+<body>
+  <div id="control-panel">
+    <video id="webcam-feed" autoplay playsinline></video>
+    <canvas id="webcam-canvas"></canvas>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
